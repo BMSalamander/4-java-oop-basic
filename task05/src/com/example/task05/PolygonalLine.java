@@ -23,7 +23,6 @@ public class PolygonalLine {
         for (Point P : points) {
             this.points.add(new Point(P.getX(), P.getY()));
         }
-
     }
 
     /**
