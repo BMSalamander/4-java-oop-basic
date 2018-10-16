@@ -7,10 +7,9 @@ import java.util.*;
  */
 public class PolygonalLine {
 
-    private ArrayList<Point> points;
+    private ArrayList<Point> points = new ArrayList<Point>();
 
     public PolygonalLine() {
-        points = new ArrayList<Point>();
     }
 
     /**
@@ -51,8 +50,12 @@ public class PolygonalLine {
      */
     public double getLength() {
         double sum = 0;
-        for (int i = 1; i < points.toArray().length; ++i) {
-            sum += (points.get(i)).getLength(points.get(i - 1));
+        Iterator<Point> iter = points.iterator();
+        Point P1 = iter.next();
+        while (iter.hasNext()) {
+            Point P2 = iter.next();
+            sum += P1.getLength(P2);
+            P1 = P2;
         }
         return sum;
     }
