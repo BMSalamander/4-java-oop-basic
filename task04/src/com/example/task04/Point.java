@@ -12,7 +12,7 @@ public class Point {
         this.y = y;
     }
 
-    void print() {
+    public void print() {
         String pointToString = String.format("(%d, %d)", x, y);
         System.out.println(pointToString);
     }
@@ -21,7 +21,7 @@ public class Point {
         return String.format("(%d, %d)", x, y);
     }
 
-    Point flip() {
+    public Point flip() {
         return new Point(-y, -x);
     }
 
