@@ -6,26 +6,27 @@ public class ComplexNumber {
     private double real;
     private double image;
 
-    public ComplexNumber() { }
+    public ComplexNumber() {
+    }
 
     public ComplexNumber(double realPart, double imaginePart) {
         real = realPart;
         image = imaginePart;
     }
 
-    void setReal(double realPart) {
+    public void setReal(double realPart) {
         real = realPart;
     }
 
-    double getReal() {
+    public double getReal() {
         return real;
     }
 
-    void setImage(double imaginePart) {
+    public void setImage(double imaginePart) {
         image = imaginePart;
     }
 
-    double getImage() {
+    public double getImage() {
         return image;
     }
 
