@@ -51,7 +51,15 @@ public class PolygonalLine {
     public double getLength() {
         double sum = 0;
         Iterator<Point> iter = points.iterator();
-        Point P1 = iter.next();
+
+        Point P1;
+        if (iter.hasNext()) {
+            P1 = iter.next();
+        }
+        else {
+            return sum;
+        }
+
         while (iter.hasNext()) {
             Point P2 = iter.next();
             sum += P1.getLength(P2);
